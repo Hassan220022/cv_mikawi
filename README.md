@@ -13,7 +13,7 @@ make
 ## Screenshots
 
 <p align="center">
-    <img alt="Screenshot" src="https://drive.google.com/file/d/1-2FSgifG7H1zBwl-eTpauyHtkoUP_6ix/view?usp=sharing" width="400">
+    <img alt="Screenshot" src="/PNG/"width="400">
 </p>
 
 ## Author
