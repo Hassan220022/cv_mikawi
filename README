@@ -1,0 +1,24 @@
+# Hassan-Mikawi-CV
+
+My curriculum vitae (CV) written using LaTeX. In my CV, you can find my contact information, websites, education, experience, achievements, projects, and skills.
+
+Please find attached my [CV](https://drive.google.com/file/d/your-google-drive-link/view?usp=sharing). 😜
+
+## Run on Terminal
+
+```sh
+pdflatex mikawi_main.tex
+```
+
+## Screenshots
+
+<p align="center">
+    <img alt="Screenshot" src="https://raw.githubusercontent.com/Hassan220022/Hassan-Mikawi-CV/main/jpg/CV_page_1.jpg" width="400">
+</p>
+
+## Author
+
+👤 **Hassan Mikawi**
+
+* LinkedIn: [Hassan Mikawi](https://www.linkedin.com/in/hassan-mikawi-1314b9238/)
+* GitHub: [@Hassan220022](https://github.com/Hassan220022)
