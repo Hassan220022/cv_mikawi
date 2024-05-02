@@ -3,6 +3,7 @@ all:
 	@echo "Making..."
 	# Compile the main tex file
 	pdflatex mikawi_CV.tex
+	clear
 	@echo "Cleaning up..."
 	$(MAKE) clean
 	# Convert PDF to PNG
@@ -17,7 +18,7 @@ all:
 	done
 
 	# Clean up MacOS specific files and finalize the process
-	rm -f .DS_Store
+	rm -f .DS_Store mikawi_CV.pdf
 	git add .
 	git commit -m "Update CV"
 	git push
