@@ -2,7 +2,7 @@
 
 My curriculum vitae (CV) written using LaTeX. In my CV, you can find my contact information, websites, education, experience, achievements, projects, and skills.
 
-Please find attached my [CV](https://drive.google.com/file/d/12nwjFJkNpho_j1YmB5FJaEVNJcAZz-LR/view). 😜
+Please find attached my [CV](https://drive.google.com/file/d/1-6-QggAd16zm_JDZumBXnqX62kKCH7pl/view). 😜
 
 ## Run on Terminal
 
@@ -13,7 +13,7 @@ make
 ## Screenshots
 
 <p align="center">
-    <img alt="Screenshot" src="/CV/mikawi_CV.png" width="400">
+    <img alt="Screenshot" src="https://drive.google.com/file/d/1-2FSgifG7H1zBwl-eTpauyHtkoUP_6ix/view?usp=sharing" width="400">
 </p>
 
 ## Author
