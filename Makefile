@@ -12,7 +12,7 @@ all:
 	mv mikawi_CV.png PNG/
 	
 	# Copy the generated PDF to multiple destinations
-	for dest in "/Users/mikawi/Nextcloud/Documents/untitled folder" "/path/to/destination2" "/Users/mikawi/Library/CloudStorage/GoogleDrive-hassansherif122202@gmail.com/My Drive/CV" "/Users/mikawi/Library/Mobile Documents/com~apple~CloudDocs/CV"; do \
+	for dest in "/Users/mikawi/Nextcloud/Documents/CV" "/path/to/destination2" "/Users/mikawi/Library/CloudStorage/GoogleDrive-hassansherif122202@gmail.com/My Drive/CV" "/Users/mikawi/Library/Mobile Documents/com~apple~CloudDocs/CV"; do \
 		cp mikawi_CV.pdf "$$dest"; \
 	done
 
