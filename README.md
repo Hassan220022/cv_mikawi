@@ -13,7 +13,7 @@ make
 ## Screenshots
 
 <p align="center">
-    <img alt="Screenshot" src="mikawi_CV.png" width="400">
+    <img alt="Screenshot" src="/CV/mikawi_CV.png" width="400">
 </p>
 
 ## Author
