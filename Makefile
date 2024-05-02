@@ -7,6 +7,7 @@ make:
 	convert -density 300 -trim mikawi_CV.pdf -quality 100 -flatten mikawi_CV.png
 	mv mikawi_CV.pdf CV
 	git add . && git commit -m "Update CV" && git push
+	clear
 
 .PHONY: make
 
