@@ -11,6 +11,8 @@ all:
 	
 	# Move the generated PNG to a specific directory
 	mv mikawi_CV.png PNG/
+	open -a /Applications/Google\ Drive.app # Open Google Drive app
+	sleep 5  # Wait for 5 seconds to ensure Google Drive is fully loaded
 	
 	# Copy the generated PDF to multiple destinations
 	for dest in "/Users/mikawi/Nextcloud/Documents/CV" "/Users/mikawi/Library/CloudStorage/GoogleDrive-hassansherif122202@gmail.com/My Drive/CV" "/Users/mikawi/Library/Mobile Documents/com~apple~CloudDocs/CV"; do \
