@@ -18,12 +18,14 @@ all:
 	for dest in "/Users/mikawi/Nextcloud/Documents/CV" "/Users/mikawi/Library/CloudStorage/GoogleDrive-hassansherif122202@gmail.com/My Drive/CV" "/Users/mikawi/Library/Mobile Documents/com~apple~CloudDocs/CV"; do \
 		cp mikawi_CV.pdf "$$dest"; \
 	done
+	sleep 15  # Wait for 5 seconds to ensure the copying process is completed
 
 	# Clean up MacOS specific files and finalize the process
 	rm -f .DS_Store mikawi_CV.pdf
 	git add .
 	git commit -m "Update CV"
 	git push
+	killall /Applications/Google\ Drive.app
 	clear
 
 # Define a make rule named clean
