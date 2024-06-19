@@ -25,7 +25,6 @@ all:
 	git add .
 	git commit -m "Update CV"
 	git push
-	killall Drive.app
 	clear
 
 # Define a make rule named clean
