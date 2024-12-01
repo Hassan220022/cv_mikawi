@@ -21,7 +21,7 @@ all:
 	sleep 1  # Wait for 5 seconds to ensure the copying process is completed
 
 	# Clean up MacOS specific files and finalize the process
-	rm -f .DS_Store mikawi_CV.pdf
+	rm -f .DS_Store
 	git add .
 	git commit -m "Update CV"
 	git push
