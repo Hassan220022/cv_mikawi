@@ -1,7 +1,10 @@
 # Main target to handle the full process
 all:
 	@echo "Making..."
-	git add mikawi_CV.tex git commit -m "Update CV" git push
+	./script/update_project.sh
+	git add mikawi_CV.tex 
+	git commit -m "Update CV"
+	git push
 
 	ssh cv
 	cd /home/personal_cv
