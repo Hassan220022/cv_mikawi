@@ -2,9 +2,7 @@
 all:
 	@echo "Making..."
 	# ./script/update_project_mac.sh
-	git add mikawi_CV.tex 
-	git commit -m "Update CV"
-	git push
+	git add . && git commit -m "Update CV" && git push
 
 	ssh cv
 	cd /home/personal_cv
@@ -12,7 +10,7 @@ all:
 
 	# Compile the main tex file
 	pdflatex mikawi_CV.tex
-	git add mikawi_CV.pdf git commit -m "Update CV" git push
+	git add mikawi_CV.pdf && git commit -m "Update CV" && git push
 	exit
 	./script/update_project_mac.sh 
 	clear
