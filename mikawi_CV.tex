@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 %Packages
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -12,7 +12,7 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \input{glyphtounicode}
-\usepackage[margin=0.5in]{geometry}
+\usepackage{fancyhdr}
 
 %---------- FONT OPTIONS ----------
 % sans-serif
@@ -56,6 +56,12 @@
 %-------------------------
 % Custom commands
 
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -64,24 +70,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-
 \newcommand{\resumeSubSubheading}[2]{
     \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
-
-
-\newcommand{\resumeEducationHeading}[6]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \textit{\small #6} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
 
 \newcommand{\resumeProjectHeading}[2]{
     \vspace{-2pt}\item
@@ -90,21 +84,20 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-\newcommand{\resumeOrganizationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
-    \end{tabular*}\vspace{-7pt}
-}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\circ$}
 
 % Tighten section and item spacing
 \titlespacing*{\section}{0pt}{4pt}{2pt}
 \titlespacing*{\subsection}{0pt}{3pt}{1pt}
 \setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt, partopsep=0pt, parsep=0pt}
+
+% Restore custom list macros
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,117 +124,111 @@
 %----------- EDUCATION -----------
 
 
-  % \resumeEducationHeading
-  %   {\href{https://aast.edu/en/index.php?from=edurank.org}{Arab Academy for Science, Technology and Maritime Transport (AAST)}}{Cairo, Egypt}
-  %   {B.Sc. in Electrical and Computer Engineering;\textbf{GPA: 3.3/4.00}}{Sep 2020 \textbf{--} May 2025}
-  %   {}{}
-  %     % \resumeSubHeadingListStart
-  %     % \small{\item{
-  %     %     \textbf{Relevant coursework:} Data Structures, Theory of Computation, Databases, \vspace{2pt}Computer Networking, OOP, Software Engineering, Computer Architecture, Operating Systems, Machine learning.}}
-  %     %     % \textbf{National University Admission Exam (YKS):} Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)}}
-  %     % \resumeSubHeadingListEnd
-  
-  % \resumeEducationHeading
-  %   {\href{https://tech.alxafrica.com/hubfs/ALX-Software-Engineering-Curriculum.pdf?hsLang=en}{ALX Software Engineering (Tuition sponsored by Mastercard)}}{Cairo, Egypt}
-  %   {Comprehensive full stack development course}{Apr 2023 \textbf{--} May 2024}
-  %   {}{}
-  % \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\href{https://aast.edu/en/index.php?from=edurank.org}{Arab Academy for Science, Technology and Maritime Transport (AAST)}}{Cairo, Egypt}
+    {B.Sc. in Electrical and Computer Engineering;\textbf{GPA: 3.3/4.00}}{Oct 2020 \textbf{--} July 2025}
+    {}{}
+    \resumeSubItem
+      {Relevant Coursework:}
+      {Data Structures, Theory of Computation, Databases, Computer Networking, OOP, Software Engineering, Computer Architecture, Operating Systems, Machine learning.}
+\resumeSubHeadingListEnd
 
-
-\section{Education}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{\href{https://aast.edu/en/index.php?from=edurank.org}{Arab Academy for Science, Technology and Maritime Transport (AAST)}} & Cairo, Egypt \\
-        \textit{\small B.Sc. in Electrical and Computer Engineering;\textbf{GPA: 3.3/4.00}} & \textit{\small Oct 2020 \textbf{--} July 2025} \\
-      \end{tabular*}\vspace{-7pt}
-      
-    \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textbf{\href{https://tech.alxafrica.com/hubfs/ALX-Software-Engineering-Curriculum.pdf?hsLang=en}{ALX Software Engineering}} & Cairo, Egypt \\
-        \textit{\small Comprehensive full stack development course} & \textit{\small Apr 2023 \textbf{--} May 2024} \\
-      \end{tabular*}\vspace{-7pt}
-  \end{itemize}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\href{https://tech.alxafrica.com/hubfs/ALX-Software-Engineering-Curriculum.pdf?hsLang=en}{ALX Software Engineering (Tuition sponsored by Mastercard)}}{Cairo, Egypt}
+    {Comprehensive full stack development course}{Apr 2023 \textbf{--} May 2024}
+    {}{}
+    \resumeSubItem
+      {Coursework:}
+      {Software engineering principles, full-stack development, and project management.}
+\resumeSubHeadingListEnd
 
 %----------- RELEVANT COURSEWORK & CERTIFICATIONS -----------
 
 \section{Relevant Coursework \& Certifications}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{Flutter Development Course on \href{https://www.udemy.com/share/101rfI3@KrQXcIQfUCfZKdb0xVqKLKdnx6689mXcLDpKdRQCCB3qYZEyTs9KuzFftgd7fqvAJA==/}{Udemy}:} Built multiple projects: "Acade" game (XO, Hangman, Number Prediction), Quran app, and a full-stack ecommerce app with Google Auth, seller dashboard, and self-hosted database.
-    \item \textbf{Software Engineering Course at ALX:} Covered software engineering principles, full-stack development, and project management.
-  \end{itemize}
+\resumeItemListStart
+  \resumeItem
+    {Flutter Development Course on \href{https://www.udemy.com/share/101rfI3@KrQXcIQfUCfZKdb0xVqKLKdnx6689mXcLDpKdRQCCB3qYZEyTs9KuzFftgd7fqvAJA==/}{Udemy}}
+    {Built multiple projects: "Acade" game (XO, Hangman, Number Prediction), Quran app, and a full-stack ecommerce app with Google Auth, seller dashboard, and self-hosted database.}
+  \resumeItem
+    {Software Engineering Course at ALX}
+    {Covered software engineering principles, full-stack development, and project management.}
+\resumeItemListEnd
 
 %----------- EXPERIENCE -----------
 
 \section{Experience}
-  \vspace{3pt}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{Intern at Arab Organization for Industrialization (AOI)} &  \\
-        \textit{\small Contributed to the manufacturing line for hardware components.} & \textit{\small Jun 2023 \textbf{--} July 2023} \\
-      \end{tabular*}\vspace{-7pt}
-      \begin{itemize}
-        \item Assisted in the optimization of the hardware assembly line, implementing lean manufacturing principles to increase efficiency and reduce waste.
-      \end{itemize}
-      
-    \item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textbf{Software Engineer Intern at Al-Ahram Establishment} & Cairo, Egypt \\
-        \textit{\small Internship} & \textit{\small Sep 2024 \textbf{--} Dec 2024} \\
-      \end{tabular*}\vspace{-7pt}
-      \begin{itemize}
-        \item Developed Python scripts to automate data retrieval from Microsoft SQL Server, streamlining processes for senior developers.
-        \item Built a fully functional agricultural website from the ground up, handling both front-end and back-end development.
-      \end{itemize}
-  \end{itemize}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Intern at Arab Organization for Industrialization (AOI)}{}
+    {Contributed to the manufacturing line for hardware components.}{Jun 2023 \textbf{--} July 2023}
+    {}{}
+    \resumeSubItem
+      {Key Contributions:}
+      {Assisted in the optimization of the hardware assembly line, implementing lean manufacturing principles to increase efficiency and reduce waste.}
+  \resumeSubheading
+    {Software Engineer Intern at Al-Ahram Establishment}{Cairo, Egypt}
+    {Internship}{Sep 2024 \textbf{--} Dec 2024}
+    {}{}
+    \resumeSubItem
+      {Key Contributions:}
+      {Developed Python scripts to automate data retrieval from Microsoft SQL Server, streamlining processes for senior developers.}
+    \resumeSubItem
+      {Key Contributions:}
+      {Built a fully functional agricultural website from the ground up, handling both front-end and back-end development.}
+\resumeSubHeadingListEnd
 
 %----------- PROJECTS -----------
 
 \section{Projects}
-    \vspace{3pt}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-      \item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-          \textbf{\href{https://github.com/Flex-Language}{Flex Programming Language (Graduation Project)}} &  \\
-          \textit{\small Python, JavaScript, React, VS Code Extension} & \textit{\small Jan 2024 -- Apr 2025} \\
-        \end{tabular*}\vspace{-7pt}
-        \begin{itemize}
-          \item Developed in Python and Franco-Arab (Arabic transliteration) syntax
-          \item Integrated an AI model for error correction that explains each error directly in the terminal
-        \end{itemize}
-        
-      \item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-          \textbf{\href{https://github.com/Hassan220022/Hyper-Market-Management-System}{Hyper Market Management System }} &  \\
-          \textit{\small Java, MySQL, NetBeans, jBCrypt, FlatLaf} & \textit{\small Jun 2023} \\
-        \end{tabular*}\vspace{-7pt}
-        \begin{itemize}
-          \item Revolutionized market management with a comprehensive system for sales, purchases, and employee roles.
-          \item Implemented administrative, marketing, inventory management, sales, and user modules.
-        \end{itemize}
-        
-      \item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-          \textbf{\href{https://github.com/Hassan220022/simple_shell}{Simple Shell}} &  \\
-          \textit{\small C, Unix System Calls, GCC, Betty Coding Style} & \textit{\small Dec 2023} \\
-        \end{tabular*}\vspace{-7pt}
-        \begin{itemize}
-          \item Developed a UNIX command line interpreter as a group project, emulating basic shell functionalities.
-          \item Implemented functionalities including command execution, environment manipulation, and custom input handling
-        \end{itemize}
-    \end{itemize}
+\resumeItemListStart
+  \resumeProjectHeading
+    {\href{https://github.com/Flex-Language}{Flex Programming Language (Graduation Project)}}
+    {}
+    \resumeSubItem
+      {Description:}
+      {Developed in Python and Franco-Arab (Arabic transliteration) syntax}
+    \resumeSubItem
+      {Key Features:}
+      {Integrated an AI model for error correction that explains each error directly in the terminal}
+  \resumeProjectHeading
+    {\href{https://github.com/Hassan220022/Hyper-Market-Management-System}{Hyper Market Management System }}
+    {}
+    \resumeSubItem
+      {Description:}
+      {Revolutionized market management with a comprehensive system for sales, purchases, and employee roles.}
+    \resumeSubItem
+      {Key Features:}
+      {Implemented administrative, marketing, inventory management, sales, and user modules.}
+  \resumeProjectHeading
+    {\href{https://github.com/Hassan220022/simple_shell}{Simple Shell}}
+    {}
+    \resumeSubItem
+      {Description:}
+      {Developed a UNIX command line interpreter as a group project, emulating basic shell functionalities.}
+    \resumeSubItem
+      {Key Features:}
+      {Implemented functionalities including command execution, environment manipulation, and custom input handling}
+\resumeItemListEnd
 
 %----------- SKILLS -----------
 
 \section{Skills}
-  \vspace{2pt}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{Languages:} C/C++, C\#, Java, Python, JavaScript, Bash, SQL, Flutter
-    \item \textbf{Operating Systems:} Windows, linux, MacOS
-    \item \textbf{Developer Tools:} Git, SSH, Linux, VS Code, Visual Studio, Docker, Servers\{linux , macos , windows Servers\}
-    \item \textbf{Methodologies:} Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD
-  \end{itemize}
+\resumeItemListStart
+  \resumeItem
+    {Languages:}
+    {C/C++, C\#, Java, Python, JavaScript, Bash, SQL, Flutter}
+  \resumeItem
+    {Operating Systems:}
+    {Windows, linux, MacOS}
+  \resumeItem
+    {Developer Tools:}
+    {Git, SSH, Linux, VS Code, Visual Studio, Docker, Servers\{linux , macos , windows Servers\}}
+  \resumeItem
+    {Methodologies:}
+    {Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD}
+\resumeItemListEnd
 
 %-------------------------------------------
 \end{document}
