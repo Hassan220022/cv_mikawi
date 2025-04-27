@@ -1,29 +1,14 @@
 # Main target to handle the full process
 all:
 	@echo "Making..."
-	# ./script/update_project_mac.sh
-	git add . && git commit -m "Update CV" && git push
-
-	ssh cv
-	cd /home/personal_cv
-	./script/update_project_server.sh
-
 	# Compile the main tex file
 	pdflatex mikawi_CV.tex
-	git add mikawi_CV.pdf && git commit -m "Update CV" && git push
-	exit
-	./script/update_project_mac.sh 
 	clear
 	@echo "Cleaning up..."
 	$(MAKE) clean
 	# Convert PDF to PNG
-	ssh cv
-	cd /home/personal_cv
-	./script/update_project_server.sh
 	convert -density 300 -trim mikawi_CV.pdf -quality 100 -flatten mikawi_CV.png
-	git add mikawi_CV.png git commit -m "cv Pic" git push
-	exit
-	./script/update_project_mac.sh
+	
 	# Move the generated PNG to a specific directory
 	mv mikawi_CV.png PNG/
 	open -a /Applications/Google\ Drive.app # Open Google Drive app
