@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10.5pt]{article}
+\documentclass[letterpaper,10pt]{article}
 %Packages
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -12,7 +12,7 @@
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \input{glyphtounicode}
-
+\usepackage[margin=0.5in]{geometry}
 
 %---------- FONT OPTIONS ----------
 % sans-serif
@@ -101,6 +101,11 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
+% Tighten section and item spacing
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt, partopsep=0pt, parsep=0pt}
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -162,8 +167,6 @@
 
 \section{Relevant Coursework \& Certifications}
   \begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{Embedded Systems (AVR) Course at \href{https://www.imtschool.com/}{IMT School}:} Completed hands-on AVR microcontroller programming and embedded systems fundamentals.
-    \item \textbf{Networking \& Cyber Security Internship at \href{https://seegypt.com/}{SEE Company}:} Learned cyber security concepts and CCNA fundamentals through practical training.
     \item \textbf{Flutter Development Course on \href{https://www.udemy.com/share/101rfI3@KrQXcIQfUCfZKdb0xVqKLKdnx6689mXcLDpKdRQCCB3qYZEyTs9KuzFftgd7fqvAJA==/}{Udemy}:} Built multiple projects: "Acade" game (XO, Hangman, Number Prediction), Quran app, and a full-stack ecommerce app with Google Auth, seller dashboard, and self-hosted database.
     \item \textbf{Software Engineering Course at ALX:} Covered software engineering principles, full-stack development, and project management.
   \end{itemize}
@@ -180,7 +183,6 @@
       \end{tabular*}\vspace{-7pt}
       \begin{itemize}
         \item Assisted in the optimization of the hardware assembly line, implementing lean manufacturing principles to increase efficiency and reduce waste.
-        \item Collaborated with engineering teams to refine design specifications and ensure compliance with industry standards.
       \end{itemize}
       
     \item
@@ -191,8 +193,6 @@
       \begin{itemize}
         \item Developed Python scripts to automate data retrieval from Microsoft SQL Server, streamlining processes for senior developers.
         \item Built a fully functional agricultural website from the ground up, handling both front-end and back-end development.
-        \item Implemented security measures to mitigate potential attacks and managed site deployment on local servers.
-        \item Optimized performance and traffic handling, ensuring stable and efficient operations.
       \end{itemize}
   \end{itemize}
 
@@ -209,12 +209,6 @@
         \begin{itemize}
           \item Developed in Python and Franco-Arab (Arabic transliteration) syntax
           \item Integrated an AI model for error correction that explains each error directly in the terminal
-          \item Designed and implemented an innovative programming language that seamlessly blends multiple syntax styles (English, Arabic transliteration, and C-style) to accommodate diverse programming preferences
-          \item Developed a robust interpreter with lexical analyzer, recursive descent parser, and comprehensive error handling including AI-assisted debugging
-          \item Created a feature-rich online IDE with real-time input handling and code execution capabilities
-          \item Built two VSCode extensions: one for language support and another with an integrated chatbot to facilitate learning for students
-          \item Implemented cross-platform compatibility with executable builds for Windows, macOS, and Linux
-          \item Designed a smart import system supporting modular code organization and library management
         \end{itemize}
         
       \item
@@ -225,9 +219,6 @@
         \begin{itemize}
           \item Revolutionized market management with a comprehensive system for sales, purchases, and employee roles.
           \item Implemented administrative, marketing, inventory management, sales, and user modules.
-          \item Used Java for backend development, NetBeans for GUI, and MySQL for the database.
-          \item Enhanced security with password management using jBCrypt and improved design using FlatLaf.
-          \item Packaged for easy installation using jpackage with an executable installer available in the releases.
         \end{itemize}
         
       \item
@@ -238,8 +229,6 @@
         \begin{itemize}
           \item Developed a UNIX command line interpreter as a group project, emulating basic shell functionalities.
           \item Implemented functionalities including command execution, environment manipulation, and custom input handling
-          \item Incorporated system-level programming with Unix system calls like fork, execve, and waitpid to manage processes.
-          \item Utilized C for core development with strict adherence to the Betty coding style for clean and maintainable code.
         \end{itemize}
     \end{itemize}
 
@@ -252,17 +241,6 @@
     \item \textbf{Operating Systems:} Windows, linux, MacOS
     \item \textbf{Developer Tools:} Git, SSH, Linux, VS Code, Visual Studio, Docker, Servers\{linux , macos , windows Servers\}
     \item \textbf{Methodologies:} Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD
-  \end{itemize}
-
-% ----------- ORGANIZATIONS -----------
-
-\section{Extracurricular Activities}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \item
-      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{ASI - AI Club (Head of Learning)} & (AAST) \\
-        \textit{\small Responsible for designing and implementing the curriculum and organizing AI-focused tournaments.} & \textit{\small Jan 2024} \\
-      \end{tabular*}\vspace{-7pt}
   \end{itemize}
 
 %-------------------------------------------
