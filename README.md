@@ -10,6 +10,16 @@ Please find attached my [CV](https://drive.google.com/file/d/1-6-QggAd16zm_JDZum
 make
 ```
 
+## CI/CD Pipeline
+
+This repository uses GitHub Actions to automatically generate the CV PDF and PNG image whenever changes are pushed to the `main` branch. The workflow:
+
+1. Compiles the LaTeX file (`mikawi_CV.tex`) to PDF using `pdflatex`
+2. Converts the PDF to a high-quality PNG image using ImageMagick
+3. Automatically commits and pushes the generated files back to the repository
+
+The workflow runs on GitHub's servers, so you don't need to have LaTeX or ImageMagick installed locally to generate the CV files.
+
 ## Screenshots
 
 <p align="center">

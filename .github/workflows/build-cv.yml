@@ -1,0 +1,58 @@
+name: Build CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get install -y imagemagick ghostscript
+
+      - name: Configure ImageMagick for PDF conversion
+        run: |
+          sudo sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml || true
+
+      - name: Compile LaTeX to PDF
+        run: |
+          pdflatex -interaction=nonstopmode mikawi_CV.tex
+          pdflatex -interaction=nonstopmode mikawi_CV.tex
+
+      - name: Clean up LaTeX auxiliary files
+        run: |
+          rm -f mikawi_CV.aux mikawi_CV.log mikawi_CV.out
+
+      - name: Convert PDF to PNG
+        run: |
+          mkdir -p PNG/
+          convert -density 300 -trim mikawi_CV.pdf -quality 100 -flatten mikawi_CV.png
+          mv mikawi_CV.png PNG/
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if [ -f mikawi_CV.pdf ] && [ -f PNG/mikawi_CV.png ]; then
+            git add mikawi_CV.pdf PNG/mikawi_CV.png
+            git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update CV [skip ci]" && git push)
+          else
+            echo "Error: PDF or PNG file not generated successfully"
+            exit 1
+          fi
