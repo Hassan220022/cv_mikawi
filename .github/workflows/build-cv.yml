@@ -10,17 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install LaTeX
+      - name: Install LaTeX + deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra
 
       - name: Install ImageMagick
         run: |
@@ -32,8 +36,10 @@ jobs:
 
       - name: Compile LaTeX to PDF
         run: |
-          pdflatex -interaction=nonstopmode mikawi_CV.tex
-          pdflatex -interaction=nonstopmode mikawi_CV.tex
+          # Run twice, ignore rerunfilecheck exit code as long as PDF is produced
+          pdflatex -interaction=nonstopmode mikawi_CV.tex || true
+          pdflatex -interaction=nonstopmode mikawi_CV.tex || true
+          test -f mikawi_CV.pdf
 
       - name: Clean up LaTeX auxiliary files
         run: |
