@@ -1,4 +1,4 @@
-\documentclass[a4, 10pt]{article}
+\documentclass[a4, 9pt]{article}
 %Packages
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -34,11 +34,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -151,29 +151,26 @@
       {\href{https://www.linkedin.com/company/orange-egypt/}{Orange Egypt}}{Cairo, Egypt}
       {Software Engineer – Power \& Operation Team}{Jan 2026 \textbf{--} Present}
         \resumeItemListStart
-          \resumeItem{Sole software engineer on the Power \& Operation team, responsible for architecting and delivering an end-to-end enterprise platform that centralises battery health analysis, alarm monitoring, and performance testing across \textbf{10,500+ telecom sites} nationwide.}
-          \resumeItem{Engineered the complete solution from scratch: RESTful backend (FastAPI), relational database, JWT-based authentication, scheduled cron jobs, SMTP email notifications, and role-based analytical dashboards — with no dedicated DevOps or infrastructure team.}
-          \resumeItem{Reduced repetitive manual workflows for the operations team by \textbf{40\%} through automated data pipelines, intelligent alerting, and centralised reporting, replacing fragmented and time-intensive processes.}
-          \resumeItem{Drive all architectural decisions independently — identifying system weak points, iterating rapidly, and keeping the platform stable while it remains in active production development.}
+          \resumeItem{Sole software engineer on the Power \& Operation team, architecting and delivering an end-to-end enterprise platform for battery health analysis, alarm monitoring, and performance testing across \textbf{10,500+ telecom sites} nationwide.}
+          \resumeItem{Engineered the full stack from scratch: RESTful backend (FastAPI), relational database, JWT auth, cron jobs, SMTP email notifications, and role-based analytical dashboards.}
+          \resumeItem{Reduced repetitive manual workflows by \textbf{40\%} through automated data pipelines, intelligent alerting, and centralised reporting; platform is in active production development.}
         \resumeItemListEnd
 
     \resumeSubheading
       {Game Spot}{Cairo, Egypt}
       {Co-Founder \& Sole Software Engineer / Architect}{2025 \textbf{--} Present}
         \resumeItemListStart
-          \resumeItem{Co-founded Game Spot and serve as the entire engineering department for a SaaS platform and mobile application that connects players with real-world gaming venues (PS cafés, billiards clubs, ping-pong halls, etc.) through a real-time, two-sided marketplace.}
-          \resumeItem{Designed and built the full product stack: a FastAPI/Python backend with Postgres/Supabase, a consumer-facing mobile app (Flutter/Expo/React Native), and a Next.js Provider Portal for venue owners to manage listings, bookings, calendars, tournaments, and revenue.}
-          \resumeItem{Integrated Paymob and Stripe for payment processing and Apple Wallet for digital check-in passes; deployed across Cloudflare, Vercel, and Railway with CI/CD pipelines — serving active venues and live bookings in production.}
-          \resumeItem{Own every technical trade-off and product direction decision, directly shaping the platform's architecture, feature roadmap, and scalability strategy toward becoming the default gaming-venue discovery and booking channel in Egypt.}
+          \resumeItem{Co-founded Game Spot and serve as the entire engineering department for a SaaS platform and mobile app connecting players to real-world gaming venues (PS cafés, billiards, ping-pong) through a real-time, two-sided marketplace.}
+          \resumeItem{Built the full stack: FastAPI/Python backend with Postgres/Supabase, Flutter/React Native consumer app, Next.js Provider Portal; integrated Paymob/Stripe payments and Apple Wallet passes; deployed on Cloudflare, Vercel, and Railway with CI/CD — live in production.}
+          \resumeItem{Own every architectural decision and technical trade-off, shaping the platform toward becoming the default gaming-venue discovery and booking channel in Egypt.}
         \resumeItemListEnd
 
     \resumeSubheading
       {Al-Ahram Establishment}{Cairo, Egypt}
       {Software Engineer Intern}{Sep 2024 \textbf{--} Dec 2024}
         \resumeItemListStart
-          \resumeItem{Automated data extraction from Microsoft SQL Server using Python, reducing manual reporting overhead for senior developers and increasing reliability of core reporting workflows.}
-          \resumeItem{Delivered a production-ready agricultural web application end-to-end, taking ownership of both backend services and frontend experience to satisfy stakeholder requirements.}
-          \resumeItem{Improved platform robustness and performance by hardening security, managing on-premise deployment, and optimizing request handling under load for day-to-day internal use.}
+          \resumeItem{Automated data extraction from Microsoft SQL Server using Python, reducing manual reporting overhead and increasing reliability of core reporting workflows.}
+          \resumeItem{Delivered a production-ready agricultural web application end-to-end, owning backend services and frontend experience; hardened security and managed on-premise deployment.}
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -203,39 +200,25 @@
   {Jan 2026}
 \resumeItemListStart
         \resumeItem{Delivered a production-ready, mobile-optimized e-commerce platform for kids fashion using Next.js 15 and Convex, tailored to the Egyptian market with localized currency, address formats, and payment options.}
-        \resumeItem{Designed and shipped a rich customer journey including smart search, advanced catalog filtering, persistent cart and wishlist, detailed size guides, user accounts, guest checkout, product reviews, and real-time order tracking.}
-        \resumeItem{Owned the operational backbone of the store by building an admin console for non-technical staff (products, inventory, bulk CSV imports, orders and returns, homepage and static content, role-based access) and integrating Paymob and Cloudflare (Workers, R2) with secure webhooks, HMAC validation, and reliable email notifications via Resend.}
-
-    
+        \resumeItem{Built an admin console for non-technical staff (products, inventory, bulk CSV, orders, role-based access) and integrated Paymob and Cloudflare (Workers, R2) with secure webhooks, HMAC validation, and email notifications via Resend.}
 \resumeItemListEnd
 
 
     
 \resumeProjectHeading
-  {\textbf{\href{https://g2scv.live}{G2scv – AI-Powered CV Builder (Co‑Founder / Core Developer)}} $|$ {FastAPI, Flutter}}
-  {July 2025 - Present}
-
+  {\textbf{\href{https://g2scv.live}{G2scv \textendash{} AI-Powered CV Builder (Co\nobreakdash-Founder / Core Developer)}} $|$ {FastAPI, Flutter}}
+  {July 2025 -- Present}
           \resumeItemListStart
-          
-            \resumeItem{Co‑founded and led development of g2scv, an AI-powered CV builder that turns developers’ GitHub, LinkedIn, and existing resumes into tailored, ATS-friendly profiles for specific roles.}
-            \resumeItem{Built robust integrations with GitHub and LinkedIn to automatically surface relevant projects, skills, and experience, feeding them into an AI pipeline for targeted CV generation.}
-            \resumeItem{Collaborated on the design of AI prompting and retrieval flows to improve clarity and impact of CV bullet points, while keeping content faithful to the candidate’s real background.}
-            \resumeItem{Contributed to a privacy-focused product architecture and tiered subscription offering, balancing individual users’ needs with advanced features for power users and teams.}
-
-
+            \resumeItem{Co\nobreakdash-founded and led development of g2scv, an AI-powered CV builder that turns developers\textquoteright{} GitHub, LinkedIn, and existing resumes into tailored, ATS-friendly profiles.}
+            \resumeItem{Built GitHub and LinkedIn integrations feeding an AI pipeline for targeted CV generation; designed privacy-focused architecture and tiered subscription offering.}
           \resumeItemListEnd
-       {\vspace{3pt}\textbf{\href{https://github.com/Flex-Language}{Flex Programming Language (Grade Project)}}
-        $|$
-          {Python, Web, Ai agentic cli, VSCode Extension}}{Jan 2024 -- July 2025}
+
+\resumeProjectHeading
+  {\textbf{\href{https://github.com/Flex-Language}{Flex Programming Language (Grade Project)}} $|$ {Python, Web, AI CLI, VSCode Extension}}
+  {Jan 2024 -- July 2025}
         \resumeItemListStart
-        \resumeItem{Conceived and delivered Flex, an AI-assisted universal programming language with multi-syntax support (English, Franco‑Arabic transliteration, and C‑style) to make programming more accessible for Arabic-speaking developers and beginners.}
-        \resumeItem{Implemented the full interpreter in Python, including a regex-based lexer, recursive descent parser, AST evaluator, and robust runtime error handling with human-readable AI explanations in the terminal.}
-        \resumeItem{Shipped a web-based IDE and VS Code extensions with real-time code execution, language tooling, and an integrated chatbot, plus a modular import system and cross-platform executables for Windows, macOS, and Linux.}
-            
-            % \resumeItem{Created a feature-rich online IDE with real-time input handling and code execution capabilities}
-            % \resumeItem{Built two VSCode extensions: one for language support and another with an integrated chatbot to facilitate learning for students}
-            % \resumeItem{Implemented cross-platform compatibility with executable builds for Windows, macOS, and Linux}
-            % \resumeItem{Designed a smart import system supporting modular code organization and library management}
+        \resumeItem{Conceived and delivered Flex, an AI-assisted universal programming language with multi-syntax support (English, Franco\nobreakdash-Arabic, and C\nobreakdash-style) to make coding accessible to Arabic-speaking beginners.}
+        \resumeItem{Implemented a full Python interpreter (lexer, parser, AST evaluator), web IDE, VS Code extensions with real-time execution and integrated chatbot, and cross-platform executables.}
         \resumeItemListEnd
       % \resumeProjectHeading
       %   {\textbf{ALX-Portfolio-Project}
@@ -283,15 +266,6 @@
     \resumeSubHeadingListEnd
 
 
-
-%----------- RELEVANT COURSEWORK & CERTIFICATIONS -----------
-
-\section{Relevant Coursework \& Certifications}
-  \resumeSubHeadingListStart
-    % \resumeItem{\textbf{Networking \& Cyber Security Internship at \href{https://seegypt.com/}{SEE Company}:} Learned cyber security concepts and CCNA fundamentals through practical training.}
-    % \resumeItem{\textbf{Flutter Development Course on \href{https://www.udemy.com/share/101rfI3@KrQXcIQfUCfZKdb0xVqKLKdnx6689mXcLDpKdRQCCB3qYZEyTs9KuzFftgd7fqvAJA==/}{Udemy}:} Built multiple projects: "Acade" game (XO, Hangman, Number Prediction), Quran app, and a full-stack ecommerce app with Google Auth, seller dashboard, and self-hosted database.}
-    \resumeItem{\textbf{Software Engineering Course at ALX:} Covered software engineering principles, full-stack development, and project management.}
-  \resumeSubHeadingListEnd
 
 %----------- SKILLS -----------
 
